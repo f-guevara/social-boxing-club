@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ring Quest — Social Boxing Club</title>
+  <meta name="description" content="Ring Quest: el juego de entrenamiento de Social Boxing Club. Misiones diarias, rachas, una pelea cada semana, temporizador de rounds y combos. Sube de Novato a Campeón.">
+  <meta property="og:title" content="Ring Quest — Social Boxing Club">
+  <meta property="og:description" content="Convierte tu entrenamiento en un juego: misiones, rachas, peleas semanales y rangos de Novato a Campeón.">
+  <meta property="og:image" content="../img/fb/video-poster.jpg">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" type="image/jpeg" href="../img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="ring.css">
+</head>
+<body class="rq">
+
+<header class="top">
+  <div class="container top__inner">
+    <a href="../" class="brand" aria-label="Volver al sitio de Social Boxing Club">
+      <img src="../img/logo.jpg" alt="" width="44" height="44">
+      <span>RING <em>QUEST</em></span>
+    </a>
+    <a href="../" class="rq-back">← Volver al club</a>
+  </div>
+</header>
+
+<main class="rq-main">
+  <div id="hud"></div>
+  <div class="rq-tabs" id="tabs" role="tablist" aria-label="Secciones del juego"></div>
+  <section id="view" aria-live="polite"></section>
+</main>
+
+<footer class="rq-foot">
+  <p>Tu progreso se guarda <b>solo en este teléfono</b>: no hay cuentas ni se envían tus datos a ningún lado. Si borras los datos del navegador, se pierde (en Logros puedes sacar un código de respaldo).</p>
+  <p>¿Todavía no entrenas con nosotros? <a class="link" data-wa="Hola, vi el Ring Quest y quiero agendar mi primera clase gratis.">Tu primera clase es gratis →</a></p>
+</footer>
+
+<div class="rq-modal" id="modal" hidden>
+  <div class="rq-modal__box" id="modalBox" role="dialog" aria-modal="true"></div>
+</div>
+<div class="rq-toasts" id="toasts" aria-live="polite"></div>
+<div class="rq-fx" id="fx" aria-hidden="true"></div>
+
+<script src="ring.js"></script>
+</body>
+</html>
