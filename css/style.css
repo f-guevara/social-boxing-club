@@ -277,3 +277,12 @@ blockquote cite { display: block; font-family: var(--sans); font-style: normal; 
   .brand span { font-size: .85rem; }
   .btn--lg { padding: 13px 20px; }
 }
+
+@media (max-width: 400px) {
+  .values__grid { grid-template-columns: 1fr; }
+  .values__grid > div { border-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); min-width: 0; }
+  .values__grid > div:last-child { border-bottom: 0; }
+  .event--side { grid-template-columns: 80px minmax(0, 1fr); }
+  .event__body { min-width: 0; padding: 20px; }
+  .event__body h3, .values h3 { overflow-wrap: anywhere; }
+}
