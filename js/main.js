@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.setAttribute('rel', 'noopener');
   });
 
-  // Formulario de clase de prueba → mensaje de WhatsApp
+  // Formulario de primera clase gratis → mensaje de WhatsApp
   const form = document.getElementById('trialForm');
   const err = document.getElementById('formErr');
   form.addEventListener('submit', (e) => {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (digits.length < 8) return showErr('Escribe un teléfono válido (al menos 8 dígitos).', form.telefono);
     err.hidden = true;
 
-    let msg = `Hola, soy ${nombre}. Quiero probar una clase en ${CLUB.nombre}. Va a entrenar: ${quien}.`;
+    let msg = `Hola, soy ${nombre}. Quiero agendar mi primera clase gratis en ${CLUB.nombre}. Va a entrenar: ${quien}.`;
     if (horario) msg += ` Horario que me funciona: ${horario}.`;
     msg += ` Mi teléfono: ${telefono}.`;
     window.open(waLink(msg), '_blank', 'noopener');
