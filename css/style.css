@@ -297,3 +297,4 @@ blockquote cite { display: block; font-family: var(--sans); font-style: normal; 
 .plans__foot { margin-top: 26px; color: var(--ink-soft); font-size: .92rem; }
 @media (max-width: 960px) { .levels__list { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .levels { padding: 24px 18px; } .levels__list { grid-template-columns: 1fr; } }
+.levels h3 + .levels__list { margin-top: 18px; }
