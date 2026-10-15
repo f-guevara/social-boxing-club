@@ -193,9 +193,9 @@ blockquote cite { display: block; font-family: var(--sans); font-style: normal; 
 .footer__legal { font-size: .76rem; max-width: 80ch; }
 
 /* WhatsApp flotante */
-.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 28px -8px rgba(37,211,102,.6); transition: transform .2s; cursor: pointer; }
-.wa-float:hover { transform: scale(1.08); }
-.wa-float svg { width: 30px; height: 30px; }
+.wa-float { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 60; display: inline-flex; align-items: center; gap: 10px; padding: 13px 26px; border-radius: 12px; background: #25d366; color: #fff; font-weight: 700; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 12px 28px -8px rgba(37,211,102,.6); transition: transform .2s, background .2s; cursor: pointer; }
+.wa-float:hover { background: #1ebe5b; transform: translateX(-50%) translateY(-2px); }
+.wa-float svg { width: 22px; height: 22px; flex-shrink: 0; }
 
 /* Chat widget (a la izquierda) */
 .chat-widget { position: fixed; left: 20px; bottom: 20px; z-index: 60; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
@@ -271,7 +271,7 @@ blockquote cite { display: block; font-family: var(--sans); font-style: normal; 
   .event--side { grid-template-columns: 100px 1fr; }
   .form { padding: 24px 18px; }
   .chat-widget { left: 14px; bottom: 14px; }
-  .wa-float { right: 14px; bottom: 14px; }
+  .wa-float { bottom: 14px; padding: 12px 20px; }
 }
 @media (max-width: 380px) {
   .brand span { font-size: .85rem; }
