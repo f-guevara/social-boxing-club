@@ -67,6 +67,15 @@ h3 { font-size: 1.5rem; }
 .hero h1 { font-size: clamp(2.6rem, 7.2vw, 5.4rem); margin-bottom: 22px; }
 .hero h1 span { color: var(--orange); display: block; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero__game { display: inline-flex; align-items: center; gap: 14px; margin-top: 18px; padding: 12px 18px 12px 12px; border: 1px dashed var(--orange); border-radius: 14px; background: rgba(255,90,31,.08); color: var(--ink); transition: background .2s, transform .2s; }
+.hero__game:hover { background: rgba(255,90,31,.16); transform: translateY(-2px); }
+.hero__game-ic { width: 42px; height: 42px; border-radius: 10px; background: var(--orange); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.hero__game-ic svg { width: 26px; height: 26px; }
+.hero__game-txt { display: flex; flex-direction: column; line-height: 1.2; }
+.hero__game-txt small { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); }
+.hero__game-txt b { font-family: var(--display); font-weight: 400; font-size: 1.3rem; letter-spacing: .03em; text-transform: uppercase; }
+.hero__game-go { font-size: 1.3rem; color: var(--orange); margin-left: 4px; transition: transform .2s; }
+.hero__game:hover .hero__game-go { transform: translateX(4px); }
 .hero__facts { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-top: 30px; font-size: .9rem; color: var(--ink-soft); }
 .hero__facts b { color: var(--ink); }
 .hero__media { position: relative; justify-self: center; width: min(100%, 380px); }
@@ -271,7 +280,9 @@ blockquote cite { display: block; font-family: var(--sans); font-style: normal; 
   .event--side { grid-template-columns: 100px 1fr; }
   .form { padding: 24px 18px; }
   .chat-widget { left: 14px; bottom: 14px; }
-  .wa-float { bottom: 14px; padding: 12px 20px; }
+  /* En celular el badge de Netlify ocupa el centro/derecha de abajo: el boton va encima, a la derecha */
+  .wa-float { left: auto; right: 14px; bottom: 76px; transform: none; padding: 12px 20px; }
+  .wa-float:hover { transform: translateY(-2px); }
 }
 @media (max-width: 380px) {
   .brand span { font-size: .85rem; }
